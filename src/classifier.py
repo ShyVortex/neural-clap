@@ -10,7 +10,7 @@ import argparse
 this_dir = os.path.dirname(os.path.abspath(__file__))
 text_column = 'review'
 output_path = os.path.normpath(os.path.join(this_dir, '..', 'output'))
-output_file = os.path.join(output_path, 'classified_reviews.jsonl')
+output_file = ""
 
 ollama_api = "http://localhost:11434/api/generate"
 
@@ -24,8 +24,20 @@ valid_answers = ["BUG", "FEATURE", "SECURITY", "PERFORMANCE", "USABILITY", "ENER
 
 def call_ollama(model, text, rel_syspath, reasoning):
     """Sends request to Ollama and returns response."""
-    abs_syspath = os.path.normpath(os.path.join(this_dir, '..', rel_syspath))
-    sys_prompt = open(abs_syspath, 'r').read()
+
+    # If given path is valid already, use it (may already be absolute)
+    if os.path.exists(rel_syspath):
+        abs_syspath = os.path.abspath(rel_syspath)
+    else:
+        # Otherwise, assume it's placed in the 'prompts' folder
+        abs_syspath = os.path.normpath(os.path.join(this_dir, '..', rel_syspath))
+
+    try:
+        with open(abs_syspath, 'r', encoding='utf-8') as f:
+            sys_prompt = f.read()
+    except FileNotFoundError:
+        print(f"[ERROR] Prompt file not found at: {abs_syspath}")
+        sys.exit(1)
 
     input_prompt = f"Categorize: {text}"
 
@@ -54,9 +66,9 @@ def call_ollama(model, text, rel_syspath, reasoning):
         "options": {
             "temperature": 0.0,                         # low temperature leads to more technical answers
             "seed": random.randint(min_val, max_val),   # for reproducibility
-            "num_predict": 128 if reasoning else 5,     # max predicted tokens
+            "num_predict": 512 if reasoning else 5,     # max predicted tokens
             "num_ctx": 4096,                            # enough context for a review
-            "stop": ["\n", "."],                        # stop the model on new line or period
+            "stop": None if reasoning else ["\n", "."], # stop model on new line or period if not reasoning
             "top_k": 10,                                # reduce probability of generating gibberish
             "top_p": 0.5,                               # value for more or less varied output
         },
@@ -69,7 +81,7 @@ def call_ollama(model, text, rel_syspath, reasoning):
         return response.json().get('response', '').strip()
     except Exception as e:
         print(f"\n[API Failure] {e}")
-        sys.exit(1)
+        return None
 
 
 def get_processed_count():
@@ -82,6 +94,37 @@ def get_processed_count():
     else:
         with open(output_file, 'r', encoding='utf-8') as f:
             return sum(1 for _ in f)
+
+
+def get_processed_rows(model):
+    """
+    Reads the output file and returns a set of row IDs that have been
+    successfully processed, excluding errors or undefined categories.
+    """
+    global output_file
+    output_file = os.path.join(output_path, f"{model}_classification.jsonl")
+
+    processed_rows = set()
+    retry_labels = ["ERROR", "UNDEFINED"]
+
+    if not os.path.exists(output_path):
+        os.makedirs(output_path, exist_ok=True)
+
+    if os.path.exists(output_file):
+        with open(output_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                try:
+                    data = json.loads(line)
+                    if 'id' in data:
+                        category = data.get("category", "ERROR")
+
+                        # If classification didn't fail, add row to processed list
+                        if category not in retry_labels:
+                            processed_rows.add(data['id'])
+
+                except json.JSONDecodeError:
+                    continue
+    return processed_rows
 
 
 def main(data, model, prompt, reasoning):
@@ -120,23 +163,23 @@ def main(data, model, prompt, reasoning):
     total_rows = len(df)
 
     # 3. Resume check
-    processed_count = get_processed_count()
+    processed_rows = get_processed_rows(model)
+    print(f"Already completed: {len(processed_rows)}/{total_rows} rows.\n")
 
-    if processed_count > 0:
-        print(f"Found pre-existing output file with {processed_count} instances.")
-        if processed_count >= total_rows:
-            print("All rows have already been analyzed!")
-            return
-        print(f"Resuming analysis from row {processed_count + 1}...\n")
-    else:
-        print("No output file found. Starting from scratch...\n")
+    if len(processed_rows) >= total_rows:
+        print("All rows appear to be successfully categorized!")
+        # Remove the return if you want to force an additional check
+        return
 
     # 4. Processing loop
-    ## Dataframe slicing: we skip rows already processed
-    df_to_process = df.iloc[processed_count:]
+    for index, row in df.iterrows():
+        current_step = index + 1
 
-    for index, row in df_to_process.iterrows():
-        current_step = hash(index) + 1
+        # --- SMART SKIP ---
+        if current_step in processed_rows:
+            continue
+        # ------------------
+
         text_content = str(row[text_column])
 
         print(f"Analysis in progress... [{current_step}/{total_rows}]", end="\n")
@@ -144,29 +187,43 @@ def main(data, model, prompt, reasoning):
         llm_response = call_ollama(model, text_content, prompt, reasoning)
 
         if llm_response:
-            clean_category = llm_response.upper().replace('"', '').strip()
-
-            # If result is not valid even after cleaning, we classify it as ERROR
-            final_category = clean_category if clean_category in valid_answers else "ERROR"
+            final_category = "EMPTY"
+            result_obj = {
+                "id": current_step,
+                "category": final_category,
+            }
 
             if reasoning:
-                analysis = json.load(llm_response)
-                ext_thinking = []
+                try:
+                    analysis = json.loads(llm_response)
 
-                for item in analysis:
-                    ext_thinking.append(item['analysis'])
+                    final_category = analysis.get("category", "EMPTY").upper()
+                    ext_thinking = analysis.get("analysis", "")
 
-                result_obj = {
-                    "id": current_step,
-                    "text": text_content,
-                    "analysis": ext_thinking,
-                    "category": final_category,
-                }
+                    result_obj = {
+                        "id": current_step,
+                        "text": text_content,
+                        "analysis": ext_thinking,
+                        "category": final_category,
+                    }
+                except json.JSONDecodeError:
+                    print(f"\n[JSON Error] Could not parse: {llm_response[:50]}...")
+                    result_obj["category"] = "ERROR"
             else:
+                clean_category = llm_response.upper().replace('"', '').strip()
+
+                # If result is not valid even after cleaning, we classify it as UNDEFINED
+                final_category = clean_category if clean_category in valid_answers else "UNDEFINED"
                 result_obj = {
                     "id": current_step,
                     "category": final_category,
                 }
+
+            # Final validation of category
+            if final_category not in valid_answers and final_category == "EMPTY":
+                final_category = "UNDEFINED"
+
+            result_obj["category"] = final_category
 
             # 5. We append the result immediately
             with open(output_file, 'a', encoding='utf-8') as f:
