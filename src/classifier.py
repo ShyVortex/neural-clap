@@ -84,18 +84,6 @@ def call_ollama(model, text, rel_syspath, reasoning):
         return None
 
 
-def get_processed_count():
-    """Counts how many rows have been written in the output file."""
-    if not os.path.exists(output_path):
-        os.mkdir(output_path)
-        return 0
-    elif not os.path.exists(output_file):
-        return 0
-    else:
-        with open(output_file, 'r', encoding='utf-8') as f:
-            return sum(1 for _ in f)
-
-
 def get_processed_rows(model):
     """
     Reads the output file and returns a set of row IDs that have been
