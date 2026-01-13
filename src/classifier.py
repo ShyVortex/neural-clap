@@ -45,7 +45,7 @@ def call_ollama(model, text, rel_syspath, reasoning):
                     "enum": valid_answers
                 }
             },
-            "required": ["category"]
+            "required": ["analysis", "category"]
         } if reasoning
         else {
             "type": "string",
