@@ -11,6 +11,7 @@ this_dir = os.path.dirname(os.path.abspath(__file__))
 text_column = 'review'
 output_path = os.path.normpath(os.path.join(this_dir, '..', 'output'))
 output_file = ""
+post_analysis = False
 
 ollama_api = "http://localhost:11434/api/generate"
 
@@ -20,6 +21,40 @@ max_val = 18446744073709551615
 
 # Expected categories in output
 valid_answers = ["BUG", "FEATURE", "SECURITY", "PERFORMANCE", "USABILITY", "ENERGY", "OTHER"]
+
+
+def finalize_json(input_jsonl, output_folder):
+    """Takes the streaming JSONL classification and converts it to a JSON file."""
+
+    os.makedirs(output_folder, exist_ok=True)
+    base_name = os.path.splitext(os.path.basename(input_jsonl))[0]
+
+    global output_file
+    output_file = os.path.join(output_folder, f"{base_name}.json")
+
+    if os.path.exists(output_file):
+        print("Finalized JSON file already exists.\nExiting...")
+        return
+
+    data = []
+    with open(input_jsonl, 'r') as jsonl_file:
+        for line_number, line in enumerate(jsonl_file, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                data.append(json.loads(line))
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON on line {line_number}: {e}")
+                continue
+
+    with open(output_file, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+
+    print(f"[SUCCESS] Converted {base_name}.jsonl to {base_name}.json\n")
+
+    if post_analysis:
+        print(f"Conversion complete! Data has been saved to {output_file}")
 
 
 def call_ollama(model, text, rel_syspath, reasoning):
@@ -81,7 +116,16 @@ def call_ollama(model, text, rel_syspath, reasoning):
         response.raise_for_status()
         return response.json().get('response', '').strip()
     except Exception as e:
-        print(f"\n[API Failure] {e}")
+        print(f"[API Failure] {e}\n")
+        if "Not Found for url" in e.args[0]:
+            print("The model you chose was not found in Ollama's library. Please try a different one.")
+            print("For the full list of available models, refer to: https://ollama.com/library")
+            sys.exit(1)
+        if reasoning and "Bad Request for url" in e.args[0]:
+            print(f"Reasoning not supported for the model {model.upper()}. Please try a different one.")
+            print("For the list of available reasoning models, refer to: "
+                  "https://ollama.com/search?c=thinking")
+            sys.exit(1)
         return None
 
 
@@ -156,7 +200,10 @@ def main(data, model, prompt, reasoning):
     print(f"Already completed: {len(processed_rows)}/{total_rows} rows.\n")
 
     if len(processed_rows) >= total_rows:
-        print("All rows appear to be successfully categorized!")
+        print("All rows appear to have been categorized...")
+        global post_analysis
+        post_analysis = True
+        finalize_json(output_file, output_path)
         # Remove the return if you want to force an additional check
         return
 
@@ -219,9 +266,11 @@ def main(data, model, prompt, reasoning):
                 json.dump(result_obj, f, ensure_ascii=False)
                 f.write('\n')  # new row for JSONL format
         else:
-            print(f"\nError thrown in line {current_step}, row skipped.")
+            print(f"Error thrown in line {current_step}, row skipped.\n")
 
-    print(f"\nAnalysis complete! Data has been saved to {output_file}")
+    # 6. Convert JSONL to JSON
+    finalize_json(output_file, output_path)
+    print(f"Analysis complete! Data has been saved to {output_file}")
 
 
 def print_usage():
