@@ -225,7 +225,7 @@ def main(data, model, prompt, reasoning):
 
 def print_usage():
     print("ERROR: Invalid program execution\n")
-    print("Basic usage: python classifier.py --prompt [PROMPT_PATH]")
+    print("Basic usage: python classifier.py --model [MODEL_NAME] --prompt [PROMPT_PATH]")
     print("Complete usage: python classifier.py --data [DATASET_PATH] --model [MODEL_NAME]"
           "--prompt [PROMPT_PATH] --reasoning [Y/N]"
           )
