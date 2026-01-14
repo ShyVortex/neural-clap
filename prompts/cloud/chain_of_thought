@@ -35,7 +35,4 @@ Struttura JSON richiesta:
     "category": "CATEGORIA_SCELTA"
   }
 ]
-
-# USER INPUT
-Analizza queste recensioni con il metodo Chain-of-Thought:
-[INSERISCI QUI IL TUO DATASET]
+Analizza queste recensioni in input con il metodo Chain-of-Thought. Salva tutta l'analisi in un file JSON e restituiscimi quello cosi che io possa scaricarlo.
