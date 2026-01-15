@@ -57,20 +57,8 @@ def main(data, conf_level, conf_interval):
         print(f"Error while opening file: {e}")
         return
 
-    population = len(df)
-
-    # 3. Calculate sample size
-    ## Algorithm -> (n = N * Z^2 * p * (1 - p)) / (e^2 * (N - 1) + Z^2 * p * (1 - p))
-    ### N = Population, Z = Z-Score, p = Standard Deviation, e = Confidence Interval
-    z_sc = z_scores[confidence_levels.index(conf_level)]
-    n_instances = math.ceil((population * pow(z_sc, 2) * st_dev * (1 - st_dev)) /
-                   (pow(conf_interval, 2) * (population - 1) + pow(z_sc, 2) * st_dev * (1 - st_dev)))
-
-    print(f"\n[SAMPLE SIZE]: {n_instances} instances")
-
-    # 4. Sample generation and saving
-    sample_df = df.sample(n=n_instances, random_state=random.randint(s_min, s_max))[['id', text_column]]
-    sample_df['id'] = pd.factorize(sample_df['id'])[0] + 1
+    sample_df = generate_sample(df, conf_level, conf_interval)
+    print(f"\n[SAMPLE SIZE]: {len(sample_df)} instances")
 
     output_file = os.path.join(output_path, "sample_data.csv")
     sample_df.to_csv(output_file, index=False)
@@ -85,6 +73,22 @@ def print_usage():
     print("Complete usage: python sample_generator.py --data [SAMPLE_PATH] --level [CONFIDENCE_LEVEL] (90 || 95 || 99)\n"
           "\t\t\t--interval [CONFIDENCE_INTERVAL] (float)[:1] (max value: 100.0)")
 
+
+def generate_sample(df, conf_level, conf_interval):
+    population = len(df)
+
+    # 3. Calculate sample size
+    ## Algorithm -> (n = N * Z^2 * p * (1 - p)) / (e^2 * (N - 1) + Z^2 * p * (1 - p))
+    ### N = Population, Z = Z-Score, p = Standard Deviation, e = Confidence Interval
+    z_sc = z_scores[confidence_levels.index(conf_level)]
+    n_instances = math.ceil((population * pow(z_sc, 2) * st_dev * (1 - st_dev)) /
+                            (pow(conf_interval, 2) * (population - 1) + pow(z_sc, 2) * st_dev * (1 - st_dev)))
+
+
+    # 4. Sample generation and saving
+    sample_df = df.sample(n=n_instances, random_state=random.randint(s_min, s_max))[['id', text_column]]
+    sample_df['id'] = pd.factorize(sample_df['id'])[0] + 1
+    return sample_df
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Sample Generator from a given dataset")
