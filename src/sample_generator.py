@@ -41,7 +41,7 @@ def main(data, conf_level, conf_interval):
     if dec_digits > 1:
         print("More than one decimal digit detected.\nThe given interval will be sliced.\n")
 
-    conf_interval = round(conf_interval / 100, 2)
+    conf_interval = round(conf_interval / 100, 1)
 
     # 2. Dataset loading
     print(f"Loading data from {data}...")
