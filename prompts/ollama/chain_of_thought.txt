@@ -32,5 +32,3 @@ Required JSON structure of expected output:
 WARNING!!!
 In the "analysis" field, strictly avoid double quotes (") or ensure they are properly escaped.
 Write everything on a single line to avoid breaking the JSON.
-
-Expected output: the raw label indicating the chosen category (without symbols or extra text).
