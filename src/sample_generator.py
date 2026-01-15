@@ -80,7 +80,7 @@ def print_usage():
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Sample Maker and Analyzer")
+    parser = argparse.ArgumentParser(description="Sample Generator from a given dataset")
 
     parser.add_argument(
         "--data",
