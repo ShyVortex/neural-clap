@@ -66,6 +66,11 @@ def main():
     )
 
     parser.add_argument(
+        "--metrics-output",
+        help="Path to CSV file where evaluation metrics will be saved"
+    )
+
+    parser.add_argument(
         "--compare",
         help="Path to automatically labeled sample"
     )
@@ -110,6 +115,20 @@ def main():
             manual_df,
             automatic_df
         )
+
+        metrics_df = pd.DataFrame([{
+            "accuracy": acc,
+            "precision": prec,
+            "recall": rec,
+            "f1_score": f1
+        }])
+
+        if args.metrics_output:
+            metrics_df.to_csv(args.metrics_output, index=False)
+
+        if args.metrics_output:
+            base_path = args.metrics_output.replace(".csv", "")
+            pd.DataFrame(cm).to_csv(base_path + "_confusion_matrix.csv", index=False)
 
         print("\nCONFUSION MATRIX")
         print(cm)
