@@ -13,7 +13,7 @@ id,review,category
 12,an excellent offline rss reader on my nexus 7. a solid  simple  lightweight reader. the only feature i miss compared with my desktop reader is the ability to group feeds in folders. thanks are due to the author.  this is an open source program and there are similar apps based on it. if you have one of these installed  as i had  uninstall it first or you get a 'duplicate' error.  this is not a web-based reader like google reader  but you can import your feeds as an opml file.,FEATURE
 13,unable to sign in with facebook i like to play this game but am not able to sign in with facebook. when i touch  the facebook icon it just shakes then freezes and then just kicks me out of the game. how can i fix this problem or can the developers please fix?? if the problem can be fixed i will give more stars. please help me!!! ?,BUG
 14,needs updating again ! i thought the app was all good but it started the same thing as before all over again needs speed improvement and the bugs need to be fixed ! the app wont even pull up please fix !,BUG
-15,dont waste your time !!! .doesnt load well ! .always freezes ! .too many pop up ads ! always deletes all my other apps after it has frozen !,SECURITY
+15,dont waste your time !!! .doesnt load well ! .always freezes ! .too many pop up ads ! always deletes all my other apps after it has frozen !,BUG
 16,:/ i am still confused on how this works maybe make it  easier to understand,USABILITY
 17,ok i guess just fix the start up bug it is getting annoying,BUG
 18,pretty good the app is pretty good  but the new sms feature is not acceptable.  i was very excited when i saw the update  but now i am disappointed. it works in its very essence  but even then it's very clumsy. things like only allowing the text being sent to one person  not allowing the ringing the editing of the recipient after initial insertion  etc. the text messages take forever to actually be sent. plus  it's an eyesore compared to the rest of the app. the cursor and send button are white on a white background and so are difficult to see...at least make it black to match. it's clear to me that they threw it in last second without much testing.,USABILITY
@@ -31,11 +31,11 @@ id,review,category
 30,great but.... great  but decrease alot of battery life on my ace 2,ENERGY
 31,last update good job but error after last update please fix it soon,BUG
 32,amazing. this app is perfection. 5.0 is insane.,OTHER
-33,issue with sound and video i'm using a spice mobile. when i use the vlc app  the sound is fine but the video freezes every 25 to 30 seconds and after few seconds video playing but sound and video mismatch.,BUG
+33,issue with sound and video i'm using a spice mobile. when i use the vlc app  the sound is fine but the video freezes every 25 to 30 seconds and after few seconds video playing but sound and video mismatch.,PERFORMANCE
 34,ya this is great.,OTHER
 35,excellent does what it says and is easy to see in bright sun.,OTHER
 36,it freezes evertime i open it pls fix it,BUG
-37,i love it  but... i use smart launcher for months  i love how it consume less memory than other launchers and without lack of features. but one thing that bothers me sometimes is that the screen transition between home screen and the drawer is not smooth enough. i hope you guys see my review and get it done. overall  5 stars!,USABILITY
+37,i love it  but... i use smart launcher for months  i love how it consume less memory than other launchers and without lack of features. but one thing that bothers me sometimes is that the screen transition between home screen and the drawer is not smooth enough. i hope you guys see my review and get it done. overall  5 stars!,PERFORMANCE
 38,beautiful widget. only problem i think is inspite of turning gps off  the app is continuously using it as shown by my battery usage statistics.,BUG
 39,whoah :0 i love the show i love the app though i suck if only it were easier to get more coins. i have had some irritating issues with the app though. when a play a song i just bought it sort of freezes and if i get out of the app and back in it doesn't count it like i had play it  so it doesn't give me coins and its happened more than once  that part gets annoying to me.,BUG
 40,no copy text feature this app is good  but i just wish it would allow me to copy text from pdfs.  sometimes i need to paste text from a pdf document into a word document.  i find this lack of functionality quite frustrating.  if the developers add this feature i would give this app 5 out of 5 stars.,FEATURE
@@ -47,7 +47,7 @@ id,review,category
 46,excellent app.  clean and easy to use. ?,OTHER
 47,good for unreliable connections. ui needs work the only android client to implement xep-0198  for reliable messaging over unreliable connections. this requires support from your xmpp server -- e.g prosody with the unofficial mod_smash module -- and your colleagues im clients -- e.g. gajim  and gibberbot itself. many of the most popular xmpp servers and clients still lack this critical feature (looking at you  ejabberd  pidgin  xabber). it would be good if other software projects started to take these stream management extensions more seriously  especially as gtalk  with its proprietary stream management  looks like it's biting the dust. we need clients gibberbot (and gajim etc) to get things moving on this front. there are issues with gibberbot. the ui needs work (e.g. the formatting of the chat window changes randomly when scrolling up and down; the background image can be corrupted when touching the screen; there is no option to select a different notification sound  and notifications don't always work with open chats)  and sometimes it takes time to negotiate a connection. xabber has a better ui (and is gpled  hint hint)  but if you must have reliable and secure xmpp messaging on the move  this is currently your only choice.,USABILITY
 48,not working when i download it it always has an error... ggggggrgrrrrrrrrrrr!!!!!!!!! could you please fix it? if you will then i will give you 5 stars...got it!,BUG
-49,live view freezes after taking the shot the live view freezes. everything else keeps working and i can take more shots but the live view stays on the first shot.,BUG
+49,live view freezes after taking the shot the live view freezes. everything else keeps working and i can take more shots but the live view stays on the first shot.,PERFORMANCE
 50,game this game is kool!!!!,OTHER
 51,good i lives the challenging mini games. and the frogs were pretty cute! :),OTHER
 52,hmm actually i do ot like tattoo but i will try..,OTHER
@@ -66,7 +66,7 @@ id,review,category
 65,nice apps  lack of stability and features it would be better if there is downloading and downloaded list rather than checking each kind of genre. the player features is also lack most of important features. very prone to crash if it's running in the background.,BUG
 66,? game freezes regularly.,PERFORMANCE
 67,very good app for reflecting i adore it,OTHER
-68,A,OTHER
+68,? cool for every day,OTHER
 69,this is excellent app,OTHER
 70,heads up feature something's wrong with the heads up feature on htc one. the notifications keep coming back even after you dismiss it,BUG
 71,terrible horrible graphics. tutorial takes forever. takes forever to load  frequent disconnects. force closes many bugs and glitches. sever is completely dead. updates are non existent. looks like developers gave up on this one. don't download! this game is just awful.,BUG
@@ -143,7 +143,7 @@ id,review,category
 142,micromax a177 that is the best app....,OTHER
 143,fun and challenging! one of the most fun android games i have played to date.,OTHER
 144,android un-friendly the app is significantly less developed than its ios counterpart  and the lack of chromecast support is a glaring omission of one of the fundamental features of an android video experience.,FEATURE
-145,i dont have a sd card so i cant use it  :(,PERFORMANCE
+145,i dont have a sd card so i cant use it  :(,FEATURE
 146,this is excellent app really helpful,OTHER
 147,facebook connection error when i try to connect to facebook  it seems that the game freeze and force quit... pls fix it,BUG
 148,it is good but not true what do u think giyz,OTHER
