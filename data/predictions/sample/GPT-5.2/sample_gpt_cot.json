@@ -1,0 +1,974 @@
+[
+  {
+    "id": "1",
+    "text_snippet": "my favourite game love it",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "2",
+    "text_snippet": "alright but not intuitive too",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "3",
+    "text_snippet": "please fix would give 5",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "4",
+    "text_snippet": "freeze freezes right after i",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "5",
+    "text_snippet": "fast and speed application",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "6",
+    "text_snippet": "fun widget good selection of",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "7",
+    "text_snippet": "? this is cool. but",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "8",
+    "text_snippet": "simple to use good and",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "9",
+    "text_snippet": "i love it but bugs",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "10",
+    "text_snippet": "disappointed freezes on start n",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "11",
+    "text_snippet": "good application best news application",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "12",
+    "text_snippet": "an excellent offline rss reader",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "13",
+    "text_snippet": "unable to sign in with",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "14",
+    "text_snippet": "needs updating again ! i",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "15",
+    "text_snippet": "dont waste your time !!!",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "16",
+    "text_snippet": ":/ i am still confused",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "17",
+    "text_snippet": "ok i guess just fix",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "18",
+    "text_snippet": "pretty good the app is",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "19",
+    "text_snippet": "not good not bad using",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "20",
+    "text_snippet": "cant play it in my",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "21",
+    "text_snippet": "absolutely wonderful! has all the",
+    "analysis": "Keywords relate to privacy or security risk; intent is concern; other categories excluded; SECURITY selected.",
+    "category": "SECURITY"
+  },
+  {
+    "id": "22",
+    "text_snippet": "htc one s great app",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "23",
+    "text_snippet": "any time avialable for read",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "24",
+    "text_snippet": "straightforward useful very useful for",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "25",
+    "text_snippet": "my go to weather app",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "26",
+    "text_snippet": "the app is good for",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "27",
+    "text_snippet": "4 stars .. interesting app.",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "28",
+    "text_snippet": "? have no idea how",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "29",
+    "text_snippet": "terrible horrible graphics. tutorial takes",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "30",
+    "text_snippet": "great but.... great but decrease",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "31",
+    "text_snippet": "last update good job but",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "32",
+    "text_snippet": "amazing. this app is perfection.",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "33",
+    "text_snippet": "issue with sound and video",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "34",
+    "text_snippet": "ya this is great.",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "35",
+    "text_snippet": "excellent does what it says",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "36",
+    "text_snippet": "it freezes evertime i open",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "37",
+    "text_snippet": "i love it but... i",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "38",
+    "text_snippet": "beautiful widget. only problem i",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "39",
+    "text_snippet": "whoah :0 i love the",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "40",
+    "text_snippet": "no copy text feature this",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "41",
+    "text_snippet": "save to sd card i",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "42",
+    "text_snippet": "great verry productive and usefull",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "43",
+    "text_snippet": "yep cool game this game",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "44",
+    "text_snippet": "new update not working well",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "45",
+    "text_snippet": "front camera it is upside",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "46",
+    "text_snippet": "excellent app. clean and easy",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "47",
+    "text_snippet": "good for unreliable connections. ui",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "48",
+    "text_snippet": "not working when i download",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "49",
+    "text_snippet": "live view freezes after taking",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "50",
+    "text_snippet": "game this game is kool!!!!",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "51",
+    "text_snippet": "good i lives the challenging",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "52",
+    "text_snippet": "hmm actually i do ot",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "53",
+    "text_snippet": "major errors i like this",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "54",
+    "text_snippet": "love it! makes it easy",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "55",
+    "text_snippet": "battery drain after new update",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "56",
+    "text_snippet": "awesome app ! this is",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "57",
+    "text_snippet": "laggy it keeps lagging on",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "58",
+    "text_snippet": "amazing very good app and",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "59",
+    "text_snippet": "no new features in a",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "60",
+    "text_snippet": "great game great game love",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "61",
+    "text_snippet": "bad for battery i had",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "62",
+    "text_snippet": "good app but lacks important",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "63",
+    "text_snippet": "freezes on loss screen would",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "64",
+    "text_snippet": "drm ruins the experience the",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "65",
+    "text_snippet": "nice apps lack of stability",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "66",
+    "text_snippet": "? game freezes regularly.",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "67",
+    "text_snippet": "very good app for reflecting",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "68",
+    "text_snippet": "? cool for every day",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "69",
+    "text_snippet": "this is excellent app",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "70",
+    "text_snippet": "heads up feature something's wrong",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "71",
+    "text_snippet": "terrible horrible graphics. tutorial takes",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "72",
+    "text_snippet": "cool it's good but does",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "73",
+    "text_snippet": "i want my money back",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "74",
+    "text_snippet": "excellent indeed i just have",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "75",
+    "text_snippet": "bad to many tutorials it",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "76",
+    "text_snippet": "ads to close to buttons",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "77",
+    "text_snippet": "xperia c5503 my anti-virus scanned",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "78",
+    "text_snippet": "easy to use app this",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "79",
+    "text_snippet": "great app its a fabulous",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "80",
+    "text_snippet": "? it's better then most",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "81",
+    "text_snippet": "awesome app .. love every",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "82",
+    "text_snippet": "awesome it is really good",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "83",
+    "text_snippet": "thanks thanks for all",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "84",
+    "text_snippet": "nice app. it is very",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "85",
+    "text_snippet": "amazing well designed but confusing.",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "86",
+    "text_snippet": "i love it but... its",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "87",
+    "text_snippet": "this game is awesome but",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "88",
+    "text_snippet": "good this game is awesome",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "89",
+    "text_snippet": "bad!!! it is not use",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "90",
+    "text_snippet": "dinesh maity i'm too happy",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "91",
+    "text_snippet": "good app. what a nice",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "92",
+    "text_snippet": "the app dont work i",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "93",
+    "text_snippet": "fix the damm bug!!! cant",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "94",
+    "text_snippet": "fun w/ few freezes &",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "95",
+    "text_snippet": "frustrating freezes at level 4.",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "96",
+    "text_snippet": "live wallpaper this is a",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "97",
+    "text_snippet": "nostalgia loved this game in",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "98",
+    "text_snippet": "? great for people on",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "99",
+    "text_snippet": "i like t this game",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "100",
+    "text_snippet": "adware this app is adware",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "101",
+    "text_snippet": "? fun for kid .thanks",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "102",
+    "text_snippet": "satisfied it played for me",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "103",
+    "text_snippet": "fast and easy to use",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "104",
+    "text_snippet": "simple its does the job",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "105",
+    "text_snippet": "easy to use and accurate",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "106",
+    "text_snippet": "this game is fun but",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "107",
+    "text_snippet": "laggy very slow even on",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "108",
+    "text_snippet": "used to like it was",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "109",
+    "text_snippet": "fast but no session restore",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "110",
+    "text_snippet": "thanks :-) xperia sp it's",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "111",
+    "text_snippet": "separate app for personal videos",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "112",
+    "text_snippet": "excellent app nice to use",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "113",
+    "text_snippet": "? simple quick and excellent",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "114",
+    "text_snippet": "unplayable freezes every time i",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "115",
+    "text_snippet": "gud it's funny game but",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "116",
+    "text_snippet": "didn't get the full features",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "117",
+    "text_snippet": "? this app is so",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "118",
+    "text_snippet": "battery level bug battery level",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "119",
+    "text_snippet": "optimalisation for 4.4 is pretty",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "120",
+    "text_snippet": "integration of emails is nice.",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "121",
+    "text_snippet": "very slow intresting to play",
+    "analysis": "Keywords reference speed or lag; intent is performance evaluation; other categories excluded; PERFORMANCE selected.",
+    "category": "PERFORMANCE"
+  },
+  {
+    "id": "122",
+    "text_snippet": "? quite reliable and user",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "123",
+    "text_snippet": "not connecting to facebook using",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "124",
+    "text_snippet": "best of i have tried",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "125",
+    "text_snippet": "ok but buggy freezes my",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "126",
+    "text_snippet": "brightness level bugs still many",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "127",
+    "text_snippet": "good app but not bad",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "128",
+    "text_snippet": "excellent it's a good app",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "129",
+    "text_snippet": "kobe is the best f",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "130",
+    "text_snippet": "pro features bug fixed please",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "131",
+    "text_snippet": "must have very useful. worth",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "132",
+    "text_snippet": "sms service not working plz",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "133",
+    "text_snippet": "still not marched triumphant upon",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "134",
+    "text_snippet": "generally a good game. difficult",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "135",
+    "text_snippet": "? this is something wonderful",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "136",
+    "text_snippet": "i think it's a very",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "137",
+    "text_snippet": "? love this site and",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "138",
+    "text_snippet": "can play again for a",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "139",
+    "text_snippet": "dissapointed you don't do united",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "140",
+    "text_snippet": "? this app is not",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "141",
+    "text_snippet": "frustrating lack of features requested",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "142",
+    "text_snippet": "micromax a177 that is the",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "143",
+    "text_snippet": "fun and challenging! one of",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "144",
+    "text_snippet": "android un-friendly the app is",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "145",
+    "text_snippet": "i dont have a sd",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "146",
+    "text_snippet": "this is excellent app really",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "147",
+    "text_snippet": "facebook connection error when i",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "148",
+    "text_snippet": "it is good but not",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "149",
+    "text_snippet": "great best for baby's five",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "150",
+    "text_snippet": "f**** if during next 24",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "151",
+    "text_snippet": "2.6 thish app is very",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "152",
+    "text_snippet": "nice but buggy some times",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "153",
+    "text_snippet": "not good every time i",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "154",
+    "text_snippet": "not showing today current temperature",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "155",
+    "text_snippet": "awesome game truly a fun",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "156",
+    "text_snippet": "lots of really useful info",
+    "analysis": "Keywords indicate usability or UX issues; intent is ease of use feedback; other categories excluded; USABILITY selected.",
+    "category": "USABILITY"
+  },
+  {
+    "id": "157",
+    "text_snippet": "error fix the errors gets",
+    "analysis": "Keywords indicate malfunction or crash; intent is reporting a concrete problem; other categories excluded; BUG selected.",
+    "category": "BUG"
+  },
+  {
+    "id": "158",
+    "text_snippet": "? does what it says!",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "159",
+    "text_snippet": "excellent best app best game",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "160",
+    "text_snippet": "very nice for all please",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  },
+  {
+    "id": "161",
+    "text_snippet": "do not update... if you're",
+    "analysis": "Keywords suggest request for new capability; intent is feature request; other categories excluded; FEATURE selected.",
+    "category": "FEATURE"
+  },
+  {
+    "id": "162",
+    "text_snippet": "wow this app is too",
+    "analysis": "No specific technical keywords; intent appears generic opinion; OTHER selected.",
+    "category": "OTHER"
+  }
+]
