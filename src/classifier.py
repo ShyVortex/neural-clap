@@ -61,6 +61,11 @@ def finalize_json(input_jsonl, output_folder):
 
     if post_analysis:
         print(f"Conversion complete! Data has been saved to {f_path}")
+        csv_output = os.path.join(output_path, f"{base_name}.csv")
+        json_df = pd.read_json(f_path)
+        json_df.to_csv(csv_output, index=False)
+
+    return f_path
 
 
 def robust_parse(row_id, snippet, llm_output):
@@ -405,8 +410,13 @@ def main(data, model, prompt, reasoning):
             print(f"Error thrown in line {current_step}, row skipped.\n")
 
     # 7. Convert JSONL to JSON
-    finalize_json(output_file, output_path)
+    f_obj = finalize_json(output_file, output_path)
     print(f"Analysis complete! Data has been saved to {output_file}")
+
+    # 8. Convert JSON to CSV
+    csv_output = os.path.join(output_path, f"{model}_classification.csv")
+    json_df = pd.read_json(f_obj)
+    json_df.to_csv(csv_output, index=False)
 
 
 def print_usage():
@@ -423,7 +433,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--data",
         type=str,
-        default=os.path.normpath(os.path.join(this_dir, '..', 'data', 'raw_data.csv')),
+        default=os.path.normpath(os.path.join(this_dir, '..', 'data', 'raw_dataset.csv')),
         help="Path to the input dataset (must be in CSV or XLSX format)"
     )
 
