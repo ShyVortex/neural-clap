@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "text_snippet": "my favourite game love it...",
+    "analysis": "Found keywords: OTHER: ['love'] | No technical issues found. Categorized as OTHER.",
+    "category": "OTHER"
+  },
+  {
+    "id": 2,
+    "text_snippet": "alright but not intuitive too...",
+    "analysis": "Found keywords: USABILITY: ['ui', 'button', 'difficult', 'intuitive'], FEATURE: ['need'] | Detected USABILITY keywords.",
+    "category": "USABILITY"
+  },
+  {
+    "id": 3,
+    "text_snippet": "please fix would give 5...",
+    "analysis": "Found keywords: BUG: ['fix', 'error'], OTHER: ['star'] | Detected BUG keywords. Priority: High.",
+    "category": "BUG"
+  },
+  {
+    "id": 4,
+    "text_snippet": "freeze freezes right after i...",
+    "analysis": "Found keywords: BUG: ['fix', 'freeze', 'not work'], PERFORMANCE: ['freeze'] | Detected BUG keywords. Priority: High.",
+    "category": "BUG"
+  },
+  {
+    "id": 5,
+    "text_snippet": "fast and speed application...",
+    "analysis": "Found keywords: PERFORMANCE: ['fast', 'speed'] | Detected PERFORMANCE keywords.",
+    "category": "PERFORMANCE"
+  }
+]
