@@ -18,5 +18,4 @@ Output atteso: Una lista puramente JSON (senza markdown ```json o testo extra).
 Formato:
 [{"id": "...", "category": "..."}]
 
-# USER INPUT
 Analizza il file in input. Non mostrarmi tutto il processo. NON PARLARE, ANALIZZA SOLO, poi salva tutta l'analisi in un file JSON e restituiscimi solamente quello cosi che io possa scaricarlo.
