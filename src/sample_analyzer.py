@@ -102,8 +102,23 @@ def main():
             print("ERROR: --compare is required in evaluation mode")
             sys.exit(1)
 
-        manual_df = pd.read_csv(args.dataset)
-        automatic_df = pd.read_csv(args.compare)
+        manual_df = pd.DataFrame
+
+        try:
+            if args.dataset.endswith('.csv'):
+                manual_df = pd.read_csv(args.dataset)
+            elif args.dataset.endswith('.json'):
+                manual_df = pd.read_json(args.dataset)
+            if args.compare.endswith('.csv'):
+                automatic_df = pd.read_csv(args.compare)
+            elif args.compare.endswith('.json'):
+                automatic_df = pd.read_json(args.compare)
+            else:
+                print("Unsupported file format. Use CSV or JSON.")
+                return
+        except Exception as e:
+            print(f"Error while opening file: {e}")
+            return
 
         if COLUMN not in manual_df.columns:
             sys.exit(f"Missing column '{COLUMN}' in manual sample")
