@@ -67,19 +67,13 @@ python src/classifier.py --data [DATASET_PATH] --model [MODEL_NAME]
 ```
 You can add your own prompts in the 'prompts' folder.
 
-Run the sample generation script:
-```bash
-# Basic usage (use CLAP's dataset)
-python src/sample_generator.py --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
-                               --interval [CONFIDENCE_INTERVAL] (max value: 100.0)
-
-# Complete usage (use your own dataset)
-python src/sample_generator.py --data [SAMPLE_PATH] --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
-                               --interval [CONFIDENCE_INTERVAL] (max value: 100.0)
-```
-
 Run the sample analyzer script:
 ```bash
+# Sample generation usage
+python src/sample_analyzer.py --dataset [DATASET_PATH] --sample no --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
+                              --interval [CONFIDENCE_INTERVAL] (max value: 100.0)
+
+# Analysis of metrics usage
 python src/sample_analyzer.py --dataset [MANUAL_SAMPLE_PATH] --sample yes
                               --compare [AUTOMATIC_SAMPLE_PATH]
 ```

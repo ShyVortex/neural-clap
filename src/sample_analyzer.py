@@ -8,7 +8,7 @@ from sklearn.metrics import (
     precision_recall_fscore_support
 )
 
-from sample_generator import generate_sample
+from sample_calculator import calculate_sample
 
 COLUMN = "category"
 
@@ -84,10 +84,10 @@ def main():
 
         df = pd.read_csv(args.dataset)
 
-        sample_df = generate_sample(
+        sample_df = calculate_sample(
             df,
             args.level,
-            args.interval / 100
+            args.interval
         )
 
         sample_df.to_csv(args.output, index=False)
