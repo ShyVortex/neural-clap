@@ -20,6 +20,7 @@ def main(clap_file, model_family, model_file, prediction_source):
 
     os.makedirs(output_dir, exist_ok=True)
 
+    # 1. Load CLAP
     clap_path = os.path.join(data_dir, clap_file)
 
     try:
@@ -46,6 +47,7 @@ def main(clap_file, model_family, model_file, prediction_source):
 
     clap_dict = dict(zip(clap_df["id"], clap_df["category"]))
 
+    # 2. Load Model Predictions
     model_path = os.path.join(predictions_root, prediction_source, model_family, model_file)
 
     if not os.path.isfile(model_path):
@@ -68,12 +70,14 @@ def main(clap_file, model_family, model_file, prediction_source):
         except Exception:
             continue  # robustness by design
 
+    # 3. Core Comparison Logic
     results = []
     matches = 0
 
     for rid, clap_cat in clap_dict.items():
         model_cat = model_dict.get(rid)
 
+        # Check Exact Match
         match = clap_cat == model_cat
         if match:
             matches += 1
@@ -87,6 +91,7 @@ def main(clap_file, model_family, model_file, prediction_source):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
+    # 4. Calculate Accuracy & Save
     total = len(results)
     accuracy = matches / total
 
