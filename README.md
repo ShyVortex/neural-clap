@@ -6,7 +6,7 @@
 ---
 
 ## About
-**neural-clap** is an advanced classification suite designed to analyze user feedback from mobile app stores.
+**neural-clap** is an advanced CLI classification suite designed to analyze user feedback from mobile app stores.
 Building upon the methodology introduced in [*"Listening to the Crowd for the Release Planning of Mobile Apps"*](https://ieeexplore.ieee.org/document/8057860) (*Scalabrino et al., 2017*),
 this repository replaces the original Random Forest and manual NLP pipelines with state-of-the-art LLMs.
 
@@ -27,6 +27,10 @@ targeting complex categories like usability and security where statistical model
     * **OTHER**: non-informative reviews, praise, or noise.
 * **Classification Arena:** includes scripts to **compare and benchmark** results between CLAP and different models
   to evaluate accuracy against the original baseline.
+* **Sample Generation**: create a sample from an input dataset according to the desired Confidence Level and Confidence
+  Interval.
+* **Sample Analyzer**: analyze and compare a manually annotated sample with an automatically labeled one, using metrics
+  like *Accuracy*, *Precision*, *Recall* and *F1-score*.
 
 ## CLAP vs. Neural-CLAP
 | Feature               | CLAP (2017)                           | Neural-CLAP (2026)                    |
@@ -36,10 +40,50 @@ targeting complex categories like usability and security where statistical model
 | **Negation Handling** | Custom State Machine / Parser         | Native Semantic Understanding         |
 | **Multilingual**      | Failed (~50% accuracy loss)           | Native Multilingual Support (via LLM) |
 
-## Installation
+You can check the results of this research in "*data/benchmarks*".
 
+## Installation
+First, head over to [Ollama's website](https://ollama.com/download/linux) and follow the instructions to install
+it on your running system.
+Ollama is a software that makes it easier to run local LLMs on any machine.
+Download and install a model you want from their [library](https://ollama.com/library).
+
+In a terminal window, type the following to set up the project:
 ```bash
 git clone https://github.com/ShyVortex/neural-clap.git
 cd neural-clap
 pip install -r requirements.txt
 ```
+
+## Usage
+Run the classifier leveraging local LLMs:
+```bash
+# Basic usage (use CLAP's dataset, defaults to no reasoning)
+python src/classifier.py --model [MODEL_NAME] --prompt [PROMPT_PATH]
+
+# Complete usage (use your own dataset, decide on reasoning)
+python src/classifier.py --data [DATASET_PATH] --model [MODEL_NAME]
+                     --prompt [PROMPT_PATH] --reasoning [Y/N]
+```
+You can add your own prompts in the 'prompts' folder.
+
+Run the sample generation script:
+```bash
+# Basic usage (use CLAP's dataset)
+python src/sample_generator.py --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
+                               --interval [CONFIDENCE_INTERVAL] (max value: 100.0)
+
+# Complete usage (use your own dataset)
+python src/sample_generator.py --data [SAMPLE_PATH] --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
+                               --interval [CONFIDENCE_INTERVAL] (max value: 100.0)
+```
+
+Run the sample analyzer script:
+```bash
+python src/sample_analyzer.py --dataset [MANUAL_SAMPLE_PATH] --sample yes
+                              --compare [AUTOMATIC_SAMPLE_PATH]
+```
+
+## License
+- This project is distributed under the [GNU General Public License v3.0](https://github.com/ShyVortex/neural-clap/blob/main/LICENSE).
+- Copyright of [@ShyVortex](https://github.com/ShyVortex) and [@garganos1](https://github.com/garganos1), 2026.
