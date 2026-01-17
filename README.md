@@ -70,7 +70,8 @@ You can add your own prompts in the 'prompts' folder.
 Run the sample analyzer script:
 ```bash
 # Sample generation usage
-python src/sample_analyzer.py --dataset [DATASET_PATH] --sample no --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
+python src/sample_analyzer.py --dataset [DATASET_PATH] --sample no
+                              --level [CONFIDENCE_LEVEL] (90 || 95 || 99)
                               --interval [CONFIDENCE_INTERVAL] (max value: 100.0)
 
 # Analysis of metrics usage
